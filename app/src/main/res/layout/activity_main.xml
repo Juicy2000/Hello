@@ -18,26 +18,11 @@
         android:text="@string/hello_world"
         android:gravity="center"
         android:textSize="30sp" />
-
-    <Button
-        android:id="@+id/btn_approve"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="@string/lab_approve" />
-
-    <Button
-        android:id="@+id/btn_object"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="@string/lab_object" />
-
-    <Button
-        android:id="@+id/btn_abstain"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="@string/lab_abstain" />
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="100dp"
+        android:numColumns="3"
+        android:id="@+id/mylist" />
 
 </LinearLayout>
