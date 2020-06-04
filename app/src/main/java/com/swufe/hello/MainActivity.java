@@ -35,4 +35,11 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
         listView.setEmptyView(findViewById(R.id.nodata));
         listView.setOnItemClickListener(this);
+        @Override
+        public void onItemClick(AdapterView<?> listview, View view, int position, long id) {
+            Log.i(TAG, "onItemClick: position=" + position);
+            Log.i(TAG, "onItemClick: parent" + listview);
+            adapter.remove(listview.getItemAtPosition(position));
+            //adapter.notifyDataSetChanged();
+        }
     }}
